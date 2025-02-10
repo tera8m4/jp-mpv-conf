@@ -5,7 +5,7 @@ Before you start using it, please take your time to read this whole README as co
 
 ## Installation
 
-NOTE: If you already have preferred mpv config files (if you don't ignore this) and want the mining scripts, get the mpv2anki script and install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
+NOTE: If you already have preferred mpv config files (if you don't ignore this) and want the mining scripts, get the [mpv2anki script](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) and install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
 
 ### Windows
 - Get shinchiro (git) build from https://mpv.io/installation/ or https://github.com/shinchiro/mpv-winbuild-cmake/releases. You want to get the 7z starting with mpv-x86-64-v3 (click show all to make it visible).
@@ -47,10 +47,10 @@ NOTE: If you already have preferred mpv config files (if you don't ignore this) 
 - [thumbfast](https://github.com/po5/thumbfast) - High-performance on-the-fly thumbnailer.
 - [autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) - Automatically load playlist entries before and after the currently playing file, by scanning the directory.
 - [mpv_websocket](https://github.com/kuroahna/mpv_websocket) - Uses websocket to send subtitle text to [texthooker UI](https://github.com/Renji-XD/texthooker-ui) so you can use a pop up dictionary. Slightly modified code from orignal.
-- mpv2anki - Automatically sends current screenshot and sentence audio to last previously made anki card.
+- [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) - Automatically sends current screenshot and sentence audio to last previously made anki card.
 
 ## Additional Credits
-- mpv2anki.lua is originally from animecards.site, however it is heavily modified from the original script
+- [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) script is originally from animecards.site, however it is heavily modified from the original script to accomodate websockets.
 - Inspired by [Zabooby's mpv config](https://github.com/Zabooby/mpv-config)
 
 ## Contributions
