@@ -42,10 +42,11 @@ if unpack ~= nil then table.unpack = unpack end
 
 local o = {}
 local platform = mp.get_property_native("platform")
-
-local prefix = utils.join_path(os.getenv('HOME'), [[Anki2/]] .. options.profile_name .. [[/collection.media]])
+local prefix
 if platform == 'windows' then
   prefix = utils.join_path(os.getenv('APPDATA'), [[Anki2]] .. options.profile_name .. [[\collection.media]])
+else
+  prefix = utils.join_path(os.getenv('HOME'), [[Anki2/]] .. options.profile_name .. [[/collection.media]])
 end
 
 local function dlog(...)
@@ -162,7 +163,7 @@ end
 
 local function anki_connect(action, params)
   local request = utils.format_json({action=action, params=params, version=6})
-  local args = {'curl', '-s', 'localhost:8765', '-X', 'POST', '-d', request}
+  local args
   if platform == 'windows' then
     args = {
       'powershell', '-NoProfile', '-Command', [[& {
@@ -171,6 +172,8 @@ local function anki_connect(action, params)
       [Console]::OpenStandardOutput().Write($u8data, 0, $u8data.Length)
       }]]
     }
+  else
+    args = {'curl', '-s', 'localhost:8765', '-X', 'POST', '-d', request}
   end
 
   local result = utils.subprocess({ args = args, cancellable = true, capture_stderr = true })
