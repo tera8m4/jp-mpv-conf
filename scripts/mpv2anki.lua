@@ -41,10 +41,9 @@ local clipboard_var
 if unpack ~= nil then table.unpack = unpack end
 
 local o = {}
-local platform = mp.get_property_native("platform")
 local prefix
-if platform == 'windows' then
-  prefix = utils.join_path(os.getenv('APPDATA'), [[Anki2]] .. options.profile_name .. [[\collection.media]])
+if mp.get_property_native("platform") == "windows" then
+  prefix = utils.join_path(os.getenv('APPDATA'), [[Anki2\]] .. options.profile_name .. [[\collection.media]])
 else
   prefix = utils.join_path(os.getenv('HOME'), [[Anki2/]] .. options.profile_name .. [[/collection.media]])
 end
@@ -163,18 +162,7 @@ end
 
 local function anki_connect(action, params)
   local request = utils.format_json({action=action, params=params, version=6})
-  local args
-  if platform == 'windows' then
-    args = {
-      'powershell', '-NoProfile', '-Command', [[& {
-      $data = Invoke-RestMethod -Uri http://127.0.0.1:8765 -Method Post -ContentType 'application/json; charset=UTF-8' -Body @"]] .. "\n" .. request .. "\n" .. [["@ | ConvertTo-Json -Depth 10
-      $u8data = [System.Text.Encoding]::UTF8.GetBytes($data)
-      [Console]::OpenStandardOutput().Write($u8data, 0, $u8data.Length)
-      }]]
-    }
-  else
-    args = {'curl', '-s', 'localhost:8765', '-X', 'POST', '-d', request}
-  end
+  local args = {'curl', '-s', 'localhost:8765', '-X', 'POST', '-d', request}
 
   local result = utils.subprocess({ args = args, cancellable = true, capture_stderr = true })
   dlog(result.stdout)
