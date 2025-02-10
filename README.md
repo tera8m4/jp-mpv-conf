@@ -50,7 +50,7 @@ NOTE: If you already have preferred mpv config files (if you don't ignore this) 
 - [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) - Automatically sends current screenshot and sentence audio to last previously made anki card.
 
 ## Additional Credits
-- [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) script is originally from animecards.site, however it is heavily modified from the original script to accomodate websockets.
+- [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) script is originally from [animecards.site](https://animecards.site/minefromanime/), however it is heavily modified from the original script to accomodate websockets.
 - Inspired by [Zabooby's mpv config](https://github.com/Zabooby/mpv-config)
 
 ## Contributions
