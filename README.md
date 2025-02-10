@@ -13,18 +13,20 @@ NOTE: If you already have preferred mpv config files (if you don't ignore this) 
 - Go to the installer folder and right click on mpv-install.bat to run as adminstrator. Follow the prompts to install.
 - You can update mpv by running updater.bat as administrator. Follow the prompts. Once initial run of updater.bat has completed your update settings will be preserved and you only need to run updater.bat as administrator for future updates.
 - Open %appdata% and create a folder called mpv.
-- download and extract the contents of this repository into the %appdata%\mpv folder
+- Download and extract the contents of this repository into the %appdata%\mpv folder (or use git clone).
 
 ### Linux
 - Install mpv from https://mpv.io/installation/ using a package manager of your choice
-- Extract contents of this repository into ~/.config/mpv
+- Download and extract contents of this repository into ~/.config/mpv (or git clone).
 
 ### MacOS
 - Untested for MacOS
-- Install mpv from https://mpv.io/installation/ and then extract contents of this repository into ~/.config/mpv (you will need to make the folders if they don't exist)
+- Install mpv from https://mpv.io/installation/ 
+- Download and extract contents of this repository into ~/.config/mpv (you will need to make the folders if they don't exist)
 - Replace mpv_websocket binary with relevant binary from https://github.com/kuroahna/mpv_websocket/releases
 
 ## Mining
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
 - Open video file with subtitles in mpv (subtitle files will auto load if they are in the same folder with same name as video file).
 - Open [TexthookerUI](https://renji-xd.github.io/texthooker-ui/) (download offline version [here](https://raw.githubusercontent.com/Renji-XD/texthooker-ui/main/docs/index.html)) and connect to the websocket port.
 - Wait for unknown word and add it to anki through texthooker and yomitan
