@@ -41,14 +41,11 @@ local clipboard_var
 if unpack ~= nil then table.unpack = unpack end
 
 local o = {}
-local platform
-local prefix
-if mp.get_property_native('options/vo-mmcss-profile', o) ~= o then
-  platform = 'windows'
+local platform = mp.get_property_native("platform")
+
+local prefix = utils.join_path(os.getenv('HOME'), [[Anki2/]] .. options.profile_name .. [[/collection.media]])
+if platform == 'windows' then
   prefix = utils.join_path(os.getenv('APPDATA'), [[Anki2]] .. options.profile_name .. [[\collection.media]])
-else
-  platform = 'linux'
-  prefix = utils.join_path(os.getenv('HOME'), [[Anki2/]] .. options.profile_name .. [[/collection.media]])
 end
 
 local function dlog(...)
@@ -165,7 +162,7 @@ end
 
 local function anki_connect(action, params)
   local request = utils.format_json({action=action, params=params, version=6})
-  local args
+  local args = {'curl', '-s', 'localhost:8765', '-X', 'POST', '-d', request}
   if platform == 'windows' then
     args = {
       'powershell', '-NoProfile', '-Command', [[& {
@@ -174,8 +171,6 @@ local function anki_connect(action, params)
       [Console]::OpenStandardOutput().Write($u8data, 0, $u8data.Length)
       }]]
     }
-  else
-    args = {'curl', '-s', 'localhost:8765', '-X', 'POST', '-d', request}
   end
 
   local result = utils.subprocess({ args = args, cancellable = true, capture_stderr = true })
