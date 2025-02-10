@@ -15,6 +15,7 @@
 local options = {
   -- Anki fields
   front_field = "Expression",
+  sentence_field = "Sentence",
   sentence_audio_field = "SentenceAudio",
   image_field = "Picture",
   -- Anki profile name. Ensure Anki username is correct.
@@ -180,6 +181,7 @@ local function add_to_last_added(ifield, afield, tfield)
     local word = note["result"][1]["fields"][options.front_field]["value"]
     local new_fields = {
       [options.sentence_audio_field]=afield,
+      [options.sentence_field]=tfield,
       [options.image_field]=ifield
     }
 
