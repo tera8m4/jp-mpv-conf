@@ -8,7 +8,8 @@ Before you start using it, please take your time to read this whole README as co
 NOTE: If you already have preferred mpv config files (if you don't ignore this) and want the mining scripts, get the [mpv2anki script](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) and install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
 
 ### Windows
-- Get shinchiro (git) build from https://mpv.io/installation/ or https://github.com/shinchiro/mpv-winbuild-cmake/releases. You want to get the 7z starting with mpv-x86-64-v3 (click show all to make it visible).
+- Get shinchiro (git) build from https://mpv.io/installation/ or https://github.com/shinchiro/mpv-winbuild-cmake/releases. You want to get the 7z starting with 
+mpv-x86_64-v3 (click show all to make it visible).
 - Extract the 7z to a folder of your choice. You won't be able to move to another folder or delete the files without reinstalling so choose wisely.
 - Go to the installer folder and right click on mpv-install.bat to run as adminstrator. Follow the prompts to install.
 - You can update mpv by running updater.bat as administrator. Follow the prompts. Once initial run of updater.bat has completed your update settings will be preserved and you only need to run updater.bat as administrator for future updates.
