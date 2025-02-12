@@ -5,6 +5,12 @@ Before you start using it, please take your time to read this whole README as co
 
 ## Installation
 
+### Existing Setup
+If you already have your own mpv configuration and ONLY want the mining scripts, do the following.
+- Download [mpv2anki.lua](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) and move it to the mpv scripts folder.
+- Download [mpv2anki.conf](https://github.com/kamperemu/jp-mpv-conf/blob/master/script-opts/mpv2anki.conf) and move it to the mpv script-opts folder.
+- Install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
+
 ### Windows
 - Get shinchiro (git) build from https://mpv.io/installation/ or https://github.com/shinchiro/mpv-winbuild-cmake/releases. You want to get the 7z starting with 
 mpv-x86_64-v3 (click show all to make it visible).
