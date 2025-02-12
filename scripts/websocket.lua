@@ -85,5 +85,5 @@ local function toggle_websocket()
   end
 end
 
-mp.register_script_message("togglewebsocket", toggle_websocket)
+-- mp.register_script_message("togglewebsocket", toggle_websocket)
 start_websocket()
