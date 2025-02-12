@@ -9,7 +9,7 @@ Before you start using it, please take your time to read this whole README as co
 If you already have your own mpv configuration and ONLY want the mining scripts, do the following.
 - Download [mpv2anki.lua](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) and move it to the mpv scripts folder.
 - Download [mpv2anki.conf](https://github.com/kamperemu/jp-mpv-conf/blob/master/script-opts/mpv2anki.conf) and move it to the mpv script-opts folder.
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 - Install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
 
 ### Windows
