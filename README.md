@@ -20,19 +20,19 @@ mpv-x86_64-v3 (click show all to make it visible).
 - You can update mpv by running updater.bat as administrator. Follow the prompts. Once initial run of updater.bat has completed your update settings will be preserved and you only need to run updater.bat as administrator for future updates.
 - Open %appdata% and create a folder called mpv.
 - Download and extract the contents of this repository into the %appdata%\mpv folder (or use git clone).
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### Linux
 - Install mpv from https://mpv.io/installation/ using a package manager of your choice
 - Download and extract contents of this repository into ~/.config/mpv (or git clone).
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### MacOS
 - Untested for MacOS
 - Install mpv from https://mpv.io/installation/ 
 - Download and extract contents of this repository into ~/.config/mpv (you will need to make the folders if they don't exist)
 - Replace mpv_websocket binary with relevant binary from https://github.com/kuroahna/mpv_websocket/releases
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name. Also set image_format to jpeg.
 
 ## Mining
 - Open video file with subtitles in mpv (subtitle files will auto load if they are in the same folder with same name as video file).
