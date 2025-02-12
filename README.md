@@ -48,7 +48,7 @@ mpv-x86_64-v3 (click show all to make it visible).
 ### Optional: Advanced configuration
 - Refer to the [manual](https://mpv.io/manual/master/) to edit mpv.conf for general configuration.
 - Refer to [manual](https://mpv.io/manual/master/) and [uosc commands](https://github.com/tomasklaen/uosc#commands) to add keybinds in input.conf.
-- Refer to the comments to configure script config files in script-opts folder.
+- Edit script config files in script-opts folder by using the comments.
 
 ## Scripts
 - [uosc](https://github.com/darsain/uosc) - Adds a minimalist but highly customisable GUI.
