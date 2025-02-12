@@ -9,6 +9,7 @@ Before you start using it, please take your time to read this whole README as co
 If you already have your own mpv configuration and ONLY want the mining scripts, do the following.
 - Download [mpv2anki.lua](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) and move it to the mpv scripts folder.
 - Download [mpv2anki.conf](https://github.com/kamperemu/jp-mpv-conf/blob/master/script-opts/mpv2anki.conf) and move it to the mpv script-opts folder.
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
 - Install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
 
 ### Windows
@@ -19,19 +20,21 @@ mpv-x86_64-v3 (click show all to make it visible).
 - You can update mpv by running updater.bat as administrator. Follow the prompts. Once initial run of updater.bat has completed your update settings will be preserved and you only need to run updater.bat as administrator for future updates.
 - Open %appdata% and create a folder called mpv.
 - Download and extract the contents of this repository into the %appdata%\mpv folder (or use git clone).
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
 
 ### Linux
 - Install mpv from https://mpv.io/installation/ using a package manager of your choice
 - Download and extract contents of this repository into ~/.config/mpv (or git clone).
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
 
 ### MacOS
 - Untested for MacOS
 - Install mpv from https://mpv.io/installation/ 
 - Download and extract contents of this repository into ~/.config/mpv (you will need to make the folders if they don't exist)
 - Replace mpv_websocket binary with relevant binary from https://github.com/kuroahna/mpv_websocket/releases
+- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
 
 ## Mining
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name (also set image_format to jpeg if you're on an macOS or iOS device).
 - Open video file with subtitles in mpv (subtitle files will auto load if they are in the same folder with same name as video file).
 - Open [TexthookerUI](https://renji-xd.github.io/texthooker-ui/) (download offline version [here](https://raw.githubusercontent.com/Renji-XD/texthooker-ui/main/docs/index.html)) and connect to the websocket port.
 - Wait for unknown word and add it to anki through texthooker and yomitan
@@ -40,7 +43,7 @@ mpv-x86_64-v3 (click show all to make it visible).
 
 ## Interface and Keybinds
 - The user interface is minimal and customizable. 
-- The gui elements of uosc are on the top and bottom of the screen. You can press right click to pull up the uosc menu.
+- The gui elements of uosc are on the top and bottom of the screen. Press right click to pull up the uosc menu.
 - Going to utils > keybindings in the uosc menu will give you a list of all the default keybinds. 
 ### Optional: Advanced configuration
 - Refer to the [manual](https://mpv.io/manual/master/) to edit mpv.conf for general configuration.
