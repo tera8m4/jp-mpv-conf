@@ -13,7 +13,7 @@ If you already have your own mpv configuration and ONLY want the mining scripts,
 - Install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
 
 If you want the full setup instead, do the following.
-- Download and extract the contents of this repository into the %appdata%\mpv folder (or use git clone).
+- Download and extract the contents of this repository into the mpv config folder (or use git clone).
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### Windows
