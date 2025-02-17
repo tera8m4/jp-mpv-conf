@@ -12,7 +12,7 @@ If you already have your own mpv configuration and ONLY want the mining scripts,
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 - Install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
 
-If you want the full setup instead, do the following.
+If you want the full setup instead, do the following
 - Download and extract the contents of this repository into the mpv config folder (or use git clone).
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
@@ -27,22 +27,22 @@ mpv-x86_64-v3 (click show all to make it visible).
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### Linux
-- Install mpv from https://mpv.io/installation/ using a package manager of your choice
-- Download and extract contents of this repository into ~/.config/mpv (or git clone).
+- Install mpv from https://mpv.io/installation/ using a package manager of your choice.
+- Download and extract contents of this repository into ~/.config/mpv (or use git clone).
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### MacOS
-- Untested for MacOS
-- Install mpv from https://mpv.io/installation/ 
-- Download and extract contents of this repository into ~/.config/mpv (you will need to make the folders if they don't exist)
-- Replace mpv_websocket binary with relevant binary from https://github.com/kuroahna/mpv_websocket/releases
+- Untested for MacOS.
+- Install mpv from https://mpv.io/installation/.
+- Download and extract contents of this repository into ~/.config/mpv (or use git clone).
+- Replace mpv_websocket binary with relevant binary from https://github.com/kuroahna/mpv_websocket/releases.
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name. Also set image_format to jpeg.
 
 ## Mining
 - Open video file with subtitles in mpv (subtitle files will auto load if they are in the same folder with same name as video file).
 - Open [TexthookerUI](https://renji-xd.github.io/texthooker-ui/) (download offline version [here](https://raw.githubusercontent.com/Renji-XD/texthooker-ui/main/docs/index.html)) and connect to the websocket port.
-- Wait for unknown word and add it to anki through texthooker and yomitan
-- Tab back to MPV and Ctrl + a to send paused sentence audio and image (align paused subtitle appropriately)
+- Wait for unknown word and add it to anki through texthooker and yomitan.
+- Tab back to MPV and Ctrl + a to send paused sentence audio and image (align paused subtitle appropriately).
 - Resume watching after updated note message popup.
 
 ## Interface and Keybinds
@@ -62,7 +62,7 @@ mpv-x86_64-v3 (click show all to make it visible).
 
 ## Additional Credits
 - [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) script is originally from [animecards.site](https://animecards.site/minefromanime/), however it is heavily modified from the original script to accomodate websockets.
-- Inspired by [Zabooby's mpv config](https://github.com/Zabooby/mpv-config)
+- Inspired by [Zabooby's mpv config](https://github.com/Zabooby/mpv-config).
 
 ## Contributions
 Feel free to send a pull request for anything.
