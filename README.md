@@ -58,7 +58,7 @@ mpv-x86_64-v3 (click show all to make it visible).
 - [uosc](https://github.com/darsain/uosc) - Adds a minimalist but highly customisable GUI.
 - [autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) - Automatically load playlist entries before and after the currently playing file, by scanning the directory.
 - [mpv_websocket](https://github.com/kuroahna/mpv_websocket) - Uses websocket to send subtitle text to [texthooker UI](https://github.com/Renji-XD/texthooker-ui) so you can use a pop up dictionary.
-- [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) - Automatically sends current screenshot and sentence audio to last previously made anki card.
+- [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) - Automatically sends current screenshot and sentence audio to previously made anki card.
 
 ## Additional Credits
 - [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) script is originally from [animecards.site](https://animecards.site/minefromanime/), however it is heavily modified from the original script to accomodate websockets.
