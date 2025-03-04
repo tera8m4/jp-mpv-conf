@@ -13,7 +13,7 @@ If you already have your own mpv configuration and ONLY want the mining scripts,
 - Install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
 
 If you want the full setup instead, do the following
-- Download and extract the contents of this repository into the mpv config folder (or use git clone).
+- Download and extract the contents of this repository into the mpv config folder.
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### Windows
@@ -23,18 +23,18 @@ mpv-x86_64-v3 (click show all to make it visible).
 - Go to the installer folder and right click on mpv-install.bat to run as adminstrator. Follow the prompts to install.
 - You can update mpv by running updater.bat as administrator. Follow the prompts. Once initial run of updater.bat has completed your update settings will be preserved and you only need to run updater.bat as administrator for future updates.
 - Open %appdata% and create a folder called mpv.
-- Download and extract the contents of this repository into the %appdata%\mpv folder (or use git clone).
+- Download the zip of this repository and move it to the %appdata%\mpv folder. Then "extract here" using 7zip.
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### Linux
 - Install mpv from https://mpv.io/installation/ using a package manager of your choice.
-- Download and extract contents of this repository into ~/.config/mpv (or use git clone).
+- Download and extract contents of this repository into ~/.config/mpv.
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### MacOS
 - Untested for MacOS.
 - Install mpv from https://mpv.io/installation/.
-- Download and extract contents of this repository into ~/.config/mpv (or use git clone).
+- Download and extract contents of this repository into ~/.config/mpv.
 - Replace mpv_websocket binary with relevant binary from https://github.com/kuroahna/mpv_websocket/releases.
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name. Also set image_format to jpeg.
 
