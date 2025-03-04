@@ -23,7 +23,7 @@ mpv-x86_64-v3 (click show all to make it visible).
 - Go to the installer folder and right click on mpv-install.bat to run as adminstrator. Follow the prompts to install.
 - You can update mpv by running updater.bat as administrator. Follow the prompts. Once initial run of updater.bat has completed your update settings will be preserved and you only need to run updater.bat as administrator for future updates.
 - Open %appdata% and create a folder called mpv.
-- Download the zip of this repository and move it to the %appdata%\mpv folder. Then "extract here" using 7zip.
+- Download the zip of this repository and move it to the %appdata%\mpv folder. Then "Extract Here" using 7zip.
 - Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### Linux
