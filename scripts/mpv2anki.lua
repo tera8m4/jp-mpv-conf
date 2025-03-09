@@ -39,10 +39,13 @@ local debug_mode = false
 if unpack ~= nil then table.unpack = unpack end
 
 local prefix
-if mp.get_property_native("platform") == "windows" then
+local platform = mp.get_property_native("platform")
+if platform == "windows" then
   prefix = utils.join_path(os.getenv('APPDATA'), [[Anki2\]] .. options.profile_name .. [[\collection.media]])
+elseif platform == "darwin" then
+  prefix = utils.join_path(os.getenv('HOME'), [[Library/share/Anki2/]] .. options.profile_name .. [[/collection.media]])
 else
-  prefix = utils.join_path(os.getenv('HOME'), [[Anki2/]] .. options.profile_name .. [[/collection.media]])
+  prefix = utils.join_path(os.getenv('HOME'), [[.local/share/Anki2/]] .. options.profile_name .. [[/collection.media]])
 end
 
 local function dlog(...)
