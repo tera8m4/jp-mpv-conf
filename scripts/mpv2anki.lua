@@ -18,8 +18,6 @@ local options = {
   sentence_field = "Sentence",
   sentence_audio_field = "SentenceAudio",
   image_field = "Picture",
-  -- Anki profile name. Ensure Anki username is correct.
-  profile_name = [[User 1]],
   -- Optional padding and fade settings in seconds.
   audio_clip_fade = 0.2,
   audio_clip_padding = 0.75,
@@ -35,18 +33,9 @@ mp.options = require "mp.options"
 mp.options.read_options(options, "mpv2anki")
 
 local debug_mode = false
+local prefix
 
 if unpack ~= nil then table.unpack = unpack end
-
-local prefix
-local platform = mp.get_property_native("platform")
-if platform == "windows" then
-  prefix = utils.join_path(os.getenv('APPDATA'), [[Anki2\]] .. options.profile_name .. [[\collection.media]])
-elseif platform == "darwin" then
-  prefix = utils.join_path(os.getenv('HOME'), [[Library/share/Anki2/]] .. options.profile_name .. [[/collection.media]])
-else
-  prefix = utils.join_path(os.getenv('HOME'), [[.local/share/Anki2/]] .. options.profile_name .. [[/collection.media]])
-end
 
 local function dlog(...)
   if debug_mode then
@@ -70,6 +59,19 @@ local function create_audio(s, e)
   local t = e - s + options.audio_clip_padding
   local source = mp.get_property("path")
   local aid = mp.get_property("aid")
+  
+  local tracks_count = mp.get_property_number("track-list/count")
+  for i = 1, tracks_count do
+    local track_type = mp.get_property(string.format("track-list/%d/type", i))
+    local track_selected = mp.get_property(string.format("track-list/%d/selected", i))
+    if track_type == "audio" and track_selected == "yes" then
+      if mp.get_property(string.format("track-list/%d/external-filename", i), o) ~= o then
+        source = mp.get_property(string.format("track-list/%d/external-filename", i))
+        aid = 'auto'
+      end
+      break
+    end
+  end
 
   local cmd = {
     'run',
@@ -158,6 +160,8 @@ local function add_to_last_added(ifield, afield, tfield)
 end
 
 local function get_extract()
+  prefix = anki_connect('getMediaDirPath')["result"]
+  dlog(prefix)
   local lines = mp.get_property_native("sub-text")
   dlog(lines)
 
