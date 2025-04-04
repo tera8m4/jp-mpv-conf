@@ -36,7 +36,7 @@ mpv-x86_64-v3 (click show all to make it visible).
 
 ## Interface and Keybinds
 - The user interface is minimal and customizable. 
-- The gui elements of uosc are on the top and bottom of the screen. Press right click to pull up the uosc menu.
+- The gui elements of uosc are on the top and bottom of the screen and their visibility reacts to cursor proximity. Press right click to pull up the uosc menu.
 - Going to utils > keybindings in the uosc menu will give you a list of all the default keybinds. 
 ### Optional: Advanced configuration
 - Refer to the [manual](https://mpv.io/manual/master/) to edit mpv.conf for general configuration.
