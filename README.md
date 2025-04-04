@@ -1,20 +1,11 @@
 # MPV Configuration Files for Mining to Anki
-Just my personal config files for mining to anki in [mpv](https://mpv.io/), a free, open-source, & cross-platform media player. 
 
-Before you start using it, please take your time to read this whole README as common issues can be easily solved by simply reading carefully.
+Just my personal config files for mining to anki in [mpv](https://mpv.io/), a free, open-source, & cross-platform media player. \
+Apart from mining scripts the configuration also includes minimalist UI, gpu acceleration, font configurations, subtitle configurations, autoloading subtitles, video configurations and autoloading videos. 
+
+> Before you start using this, please take your time to read this whole README as common issues can be easily solved by simply reading carefully.
 
 ## Installation
-
-### Existing Setup
-If you already have your own mpv configuration and ONLY want the mining scripts, do the following.
-- Download [mpv2anki.lua](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) and move it to the mpv scripts folder.
-- Download [mpv2anki.conf](https://github.com/kamperemu/jp-mpv-conf/blob/master/script-opts/mpv2anki.conf) and move it to the mpv script-opts folder.
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
-- Install [mpv_websocket](https://github.com/kuroahna/mpv_websocket).
-
-If you want the full setup instead, do the following
-- Download and extract the contents of this repository into the mpv config folder.
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### Windows
 - Get shinchiro (git) build from https://mpv.io/installation/ or https://github.com/shinchiro/mpv-winbuild-cmake/releases. You want to get the 7z starting with 
@@ -24,19 +15,17 @@ mpv-x86_64-v3 (click show all to make it visible).
 - You can update mpv by running updater.bat as administrator. Follow the prompts. Once initial run of updater.bat has completed your update settings will be preserved and you only need to run updater.bat as administrator for future updates.
 - Open %appdata% and create a folder called mpv.
 - Download the zip of this repository and move it to the %appdata%\mpv folder. Then "Extract Here" using 7zip.
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### Linux
 - Install mpv from https://mpv.io/installation/ using a package manager of your choice.
 - Download and extract contents of this repository into ~/.config/mpv.
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name.
 
 ### MacOS
 - Untested for MacOS.
 - Install mpv from https://mpv.io/installation/.
 - Download and extract contents of this repository into ~/.config/mpv.
 - Replace mpv_websocket binary with relevant binary from https://github.com/kuroahna/mpv_websocket/releases.
-- Go to script-opts/mpv2anki.conf and set your anki fields and anki profile name. Also set image_format to jpeg.
+- Go to script-opts/mpv2anki.conf and set image_format to png.
 
 ## Mining
 - Open video file with subtitles in mpv (subtitle files will auto load if they are in the same folder with same name as video file).
@@ -61,7 +50,7 @@ mpv-x86_64-v3 (click show all to make it visible).
 - [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) - Automatically sends current screenshot and sentence audio to previously made anki card.
 
 ## Additional Credits
-- [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) script is originally from [animecards.site](https://animecards.site/minefromanime/), however it is heavily modified from the original script to accomodate websockets.
+- [mpv2anki](https://raw.githubusercontent.com/kamperemu/jp-mpv-conf/refs/heads/master/scripts/mpv2anki.lua) script is originally from [Acacreon Script](https://github.com/friedrich-de/Anacreon-Script), however it is heavily modified from the original script. The main functional difference is that I've removed the ability to select multiple subtitles lines for sentence and sentence audio. Use [this script](https://raw.githubusercontent.com/friedrich-de/Anacreon-Script/refs/heads/main/animecards_v35_modified.lua) instead, if you need that.
 - Inspired by [Zabooby's mpv config](https://github.com/Zabooby/mpv-config).
 
 ## Contributions
