@@ -1,13 +1,7 @@
 -- mpv_websocket
 -- https://github.com/kuroahna/mpv_websocket
 
-local options = {
-  socket_port = "6677"
-}
-
-local utils = require 'mp.utils'
-mp.options = require "mp.options"
-mp.options.read_options(options, "websocket")
+local utils = require("mp.utils")
 
 local platform = mp.get_property_native("platform")
 
@@ -35,7 +29,10 @@ local function find_mpv_socket(config_file_path)
 
   local mpv_socket
   for line in file:lines() do
-    mpv_socket = line:match("^input%-ipc%-server%s*=%s*(%g+)%s*")
+    local startIndex, endIndex = string.find(line, "=")
+    if startIndex ~= nil and string.sub(line, 0, startIndex-1) == "input-ipc-server" then
+      mpv_socket = string.sub(line, startIndex + 1)
+    end
     if mpv_socket then
       break
     end
@@ -66,7 +63,7 @@ local function start_websocket()
       "-m",
       mpv_socket,
       "-w",
-      options.socket_port,
+      "6677",
     },
   })
 end
@@ -85,5 +82,5 @@ local function toggle_websocket()
   end
 end
 
--- mp.register_script_message("togglewebsocket", toggle_websocket)
+mp.register_script_message("togglewebsocket", toggle_websocket)
 start_websocket()
