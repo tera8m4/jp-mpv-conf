@@ -47,6 +47,13 @@ local function get_name(s, e)
   return mp.get_property("filename"):gsub('%W','').. tostring(s) .. tostring(e)
 end
 
+local function is_audio_file()
+  local path = mp.get_property("path")
+  return path:match("%.mp3$") or path:match("%.wav$") or path:match("%.flac$")
+    or path:match("%.aac$") or path:match("%.ogg$")
+    or path:match("%.m4b")
+end
+
 local function create_audio(s, e)
 
   if s == nil or e == nil then
@@ -144,8 +151,11 @@ local function add_to_last_added(ifield, afield, tfield)
     local new_fields = {
       [options.sentence_audio_field]=afield,
       [options.sentence_field]=tfield,
-      [options.image_field]=ifield
     }
+
+    if not is_audio_file() then 
+      new_fields[options.image_field] = ifield
+    end
 
     anki_connect('updateNoteFields', {
       note={
